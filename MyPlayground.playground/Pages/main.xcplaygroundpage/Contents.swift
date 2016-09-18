@@ -25,7 +25,9 @@ let b = 32
 
 
 
-
+if a % b == 0 {
+    print(true)
+}
 
 
 
@@ -35,7 +37,11 @@ let b = 32
 */
 
 
-
+if y / Int(x) > 3 {
+    print(true)
+} else {
+    print(false)
+}
 
 
 
@@ -45,7 +51,9 @@ let b = 32
 */
 
 
-
+if y > Int(x) && a / b > 9 {
+    print(true)
+}
 
 
 
@@ -56,7 +64,13 @@ let b = 32
 */
 
 
-
+func isGreater(n: Int, i: Int) -> String {
+    if a > b {
+        return "yep"
+    } else {
+        return "nope"
+    }
+}
 
 
 
@@ -73,7 +87,27 @@ let b = 32
 
 
 
+func isForce(name: String) -> Bool {
+    switch (name) {
+        case "Luke":
+            return true
+        case "Leia":
+            return true
+        case "Anakin":
+            return true
+        case "Obi Wan":
+            return true
+        case "Yoda":
+            return true
+        case "Vader":
+            return true
+    default:
+        return false
+    }
+    
+}
 
+isForce(name: "Luke")
 
 
 
@@ -87,8 +121,20 @@ let b = 32
  ```
 */
 
+func isInRange(n: Int) {
+    switch n {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
-
+isInRange(n: 4)
 
 
 
