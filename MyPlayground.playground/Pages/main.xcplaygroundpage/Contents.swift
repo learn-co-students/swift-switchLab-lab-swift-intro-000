@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch b % 2 {
+    case 0 :
+    print("true")
+    default:
+    print("false")
+}
 
 
 
@@ -33,7 +38,13 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+var divided = (y/Int(x)) > 3
+switch divided {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -45,8 +56,14 @@ let b = 32
 */
 
 
+var new = (y > Int(x)) && (a/b ) > 9
 
-
+switch new {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -56,7 +73,20 @@ let b = 32
 */
 
 
+func isGreater(one: Int, two: Int) -> String {
+    var result = ""
+    switch one > two {
+    case true:
+        print("yep")
+        result += "yep"
+    default:
+       print("nope")
+        result += "nope"
+    }
+    return result
+}
 
+isGreater(one: a, two: b)
 
 
 
@@ -71,7 +101,18 @@ let b = 32
  ```
 */
 
-
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke", "Obi Wan", "Vader":
+        return true
+    case "Leia":
+        return true
+    case "Anakin" :
+        return true
+        default:
+        return false
+    }
+}
 
 
 
@@ -86,7 +127,19 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(num: Int) {
+    switch num {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure ")
+    }
 
+}
 
 
 
