@@ -22,15 +22,11 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-switch b {
-case b where b < 0:
-    print(false)
-case b where b == 0:
-    print (true)
-case b where b > 0:
-    print(false)
+switch a % b {
+case 0:
+    print(true)
 default:
-    break
+    print(false)
 }
 
 
@@ -42,7 +38,7 @@ default:
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-switch Double(y) / x > 3 {
+switch y / Int(x) > 3 {
 case true:
     print(true)
 case false:
