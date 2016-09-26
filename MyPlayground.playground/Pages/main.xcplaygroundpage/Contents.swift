@@ -96,21 +96,12 @@ func isGreater(a: Int, b: Int) -> String {
 
 func isForce(name: String) -> Bool {
     switch name {
-    case "Luke":
-        return true
-    case "Leia":
-        return true
-    case "Anakin":
-        return true
-    case "Obi Wan":
-        return true
-    case "Yoda":
-        return true
-    case "Vader":
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
         return true
     default:
         return false
     }
+}
 
 
 
@@ -127,7 +118,7 @@ func isForce(name: String) -> Bool {
  ```
 */
 
-    func isInRange(num: Int) -> String {
+    func isInRange(num: Int) {
         switch num {
         case 0...3:
             print("Small")
@@ -138,7 +129,9 @@ func isForce(name: String) -> Bool {
         default:
             print("Not Sure")
         }
-    }
+}
+
+
 
 
 
