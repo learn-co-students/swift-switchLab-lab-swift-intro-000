@@ -90,17 +90,7 @@ isGreater(2, b: 3)
 */
 func isForce(name: String) -> Bool {
     switch name {
-        case "Lunke":
-            return true
-        case "Leia":
-            return true
-        case "Anakin":
-            return true
-        case "Obi Wan":
-            return true
-        case "Yoda":
-            return true
-        case "Vader":
+        case "Lunke","Leia","Anakin","Obi Wan","Yoda","Vader":
             return true
         default:
             return false
