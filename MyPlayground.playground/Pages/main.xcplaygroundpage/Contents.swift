@@ -22,8 +22,8 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-switch a % b == 0 {
-case true:
+switch a % b {
+case 0:
     print("true")
 default:
     print("false")
@@ -38,8 +38,8 @@ default:
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-switch (y/Int(x)) > 3 {
-case true:
+switch (y/Int(x)) {
+case 3..<Int.max:
     print("true")
 default:
     print("false")
@@ -92,17 +92,7 @@ func isGreater(num1: Int, num2: Int) -> String {
 */
 func isForce(name: String) -> Bool {
     switch name {
-    case "Luke":
-        return true
-    case "Leia":
-        return true
-    case "Anakin":
-        return true
-    case "Obi Wan":
-        return true
-    case "Yoda":
-        return true
-    case "Vader":
+    case "Luke", "leia", "Anakin", "Obi Wan", "Yoda", "Vader":
         return true
     default:
         return false
