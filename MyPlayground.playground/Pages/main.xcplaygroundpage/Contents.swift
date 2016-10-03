@@ -24,44 +24,52 @@ let b = 32
 */
 
 
-
-
-
-
+switch a % b {
+case 0:
+    print("true")
+default:
+    print("false")
+}
 
 
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-
-
-
-
-
+switch Double(y) / x {
+case let x where x > 3:
+    print("true")
+default:
+    print("false")
+}
 
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
-
-
-
-
-
+switch ((Double(y) > x) && (a/b > 9)) {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
+func isGreater(int1: Int, int2: Int) -> String {
+    switch int1 > int2 {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
-
-
-
-
-
-
+isGreater(int1: 3, int2: 2)
+isGreater(int1: 2, int2: 3)
 
 /*: Question 5
 ### **(5)** Write a function named `isForce` that takes a `String` argument which represents a persons name and returns a `Bool`. If the persons name is equal to the name of someone with the force, return `true`, else return `false`. People with the force are Luke, Leia, Anakin, Obi Wan, Yoda & Vader.
@@ -71,12 +79,17 @@ let b = 32
  ```
 */
 
+func isForce(with: String) -> Bool {
+    switch with {
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
-
-
-
-
-
+isForce(with: "Luke")
+isForce(with: "Han")
 
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
@@ -87,11 +100,21 @@ let b = 32
  ```
 */
 
+func isInRange(int : Int) {
+    switch int {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
-
-
-
-
-
-
+isInRange(int: 2)
+isInRange(int: 5)
+isInRange(int: 8)
+isInRange(int: 11)
 //:
