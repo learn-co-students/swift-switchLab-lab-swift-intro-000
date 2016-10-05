@@ -86,8 +86,24 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(_ a: Int) {
+    if((a <= 3) && (a >= 0)) {
+        print("small")
+    }
+    else if((a <= 6) && (a > 3)){
+        print("medium")
+    }
+    else if((a <= 10) && (a > 6)) {
+        print("big")
+    }
+    else{
+        print("Not Sure")
+    }
+}
 
-
+isInRange(0)
+isInRange(99)
+isInRange(5) // 5 is not big lol
 
 
 
