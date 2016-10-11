@@ -23,7 +23,11 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
+if a % b == 0 {
 
+print("true")
+
+}
 
 
 
@@ -35,7 +39,14 @@ let b = 32
 */
 
 
+if Double(y) / x > 3 {
 
+print("true")
+
+} else
+{ print("false")
+
+}
 
 
 
@@ -47,15 +58,32 @@ let b = 32
 
 
 
+if Double(y) > x && a / b > 9 {
+
+print ("true")
 
 
-
+}
 
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
 
+
+func isGreater(a:Int, b:Int) -> String {
+
+    if a > b {
+
+return yep
+    }
+
+        else {
+
+return nope
+
+}
+}
 
 
 
@@ -72,9 +100,44 @@ let b = 32
 */
 
 
+fun isForce(name:String) {
+
+    swift; isForce {
+
+case "Luke"
+
+print("true")
 
 
+case "Leia"
+        
+print("true")
 
+case "Anakin"
+        
+print("true")
+
+
+case "Obi Wan"
+        
+print("true")
+
+case "Yoda"
+        
+print("true")
+
+
+case "Vader"
+        
+print("true")
+        
+
+        default:
+
+false()
+
+}
+}
 
 
 
@@ -86,6 +149,33 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+
+func isInRange(a:Int) {
+
+    
+if 0 >= 3 {
+
+print("small")
+
+}
+
+else if {
+    
+4 >= 6
+
+print ("big")
+
+}
+
+else {
+
+print("not sure")
+
+}
+}
+
+
+
 
 
 
