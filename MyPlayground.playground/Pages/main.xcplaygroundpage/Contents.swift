@@ -23,9 +23,15 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-if a % b == 0 {
+switch a % b   {
 
-print("true")
+case 0:
+    
+print(true)
+    
+default:
+    
+print(false)
 
 }
 
@@ -39,12 +45,15 @@ print("true")
 */
 
 
-if Double(y) / x > 3 {
+switch y / Int(x) {
 
-print("true")
+case 3..<Int.max:
+    
+print(true)
 
-} else
-{ print("false")
+default:
+
+    print(false)
 
 }
 
@@ -58,10 +67,15 @@ print("true")
 
 
 
-if Double(y) > x && a / b > 9 {
+switch y > Int(x) && a / b > 9 {
 
-print ("true")
+case true:
+        
+print(true)
 
+    default:
+    print(false)
+    
 
 }
 
@@ -73,14 +87,17 @@ print ("true")
 
 func isGreater(a:Int, b:Int) -> String {
 
-    if a > b {
+    switch a > b {
 
-return yep
-    }
+    case true:
+    
+return "yep"
+    
 
-        else {
+    default:
 
-return nope
+return "nope"
+
 
 }
 }
@@ -100,41 +117,41 @@ return nope
 */
 
 
-fun isForce(name:String) {
+func isForce(name:String) -> Bool {
 
-    swift; isForce {
+    switch name {
 
-case "Luke"
+case "Luke":
 
-print("true")
+return true
 
 
-case "Leia"
+case "Leia":
         
-print("true")
+return true
 
-case "Anakin"
+case "Anakin":
         
-print("true")
+return true
 
 
-case "Obi Wan"
+case "Obi Wan":
         
-print("true")
+return true
 
-case "Yoda"
+case "Yoda":
         
-print("true")
+return true
 
 
-case "Vader"
+case "Vader":
         
-print("true")
+return true
         
 
         default:
 
-false()
+return false
 
 }
 }
@@ -150,24 +167,27 @@ false()
  ```
 */
 
-func isInRange(a:Int) {
+func isInRange(arg:Int) {
 
     
-if 0 >= 3 {
+    switch arg {
+        
+case 0...3:
 
 print("small")
 
-}
 
-else if {
     
-4 >= 6
+case 4...6:
+
+print ("medium")
+
+
+case 4...6:
 
 print ("big")
-
-}
-
-else {
+    
+default:
 
 print("not sure")
 
