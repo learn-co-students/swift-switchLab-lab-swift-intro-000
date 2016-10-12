@@ -23,8 +23,12 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-
-
+switch a % b {
+case 0:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -35,6 +39,12 @@ let b = 32
 */
 
 
+switch y / Int(x) {
+    case 3..<Int.max:
+        print(true)
+    default:
+    print(false)
+}
 
 
 
@@ -44,9 +54,12 @@ let b = 32
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
-
-
-
+switch y > Int(x) && a/b > 9 {
+case true:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -56,11 +69,16 @@ let b = 32
 */
 
 
+func isGreater(a: Int, b: Int) -> String {
+    switch a > b {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
-
-
-
-
+isGreater(a: 3, b: 5)
 
 
 /*: Question 5
@@ -71,9 +89,14 @@ let b = 32
  ```
 */
 
-
-
-
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -88,9 +111,18 @@ let b = 32
 */
 
 
-
-
-
+func isInrange(arg: Int) {
+    switch arg {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
 
 
