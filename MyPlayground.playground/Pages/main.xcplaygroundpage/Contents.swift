@@ -16,7 +16,7 @@ let y = 12
 let a = 321
 let b = 32
 
-
+let xInt = Int(x)
 
 
 
@@ -63,9 +63,14 @@ default:
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
-let operation
+let result2 = (y > xInt) && ((a / b) > 9)
 
-switch
+switch result2 {
+    case true:
+        print("true")
+    default:
+        print("false")
+}
 
 
 
@@ -75,7 +80,16 @@ switch
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
+func isGreater(num1: Int, num2: Int) -> String {
+    switch num1 > num2 {
+        case true:
+            return "yep"
+        default:
+            return"nope"
+    }
+}
 
+isGreater(num1: a, num2: b)
 
 
 
