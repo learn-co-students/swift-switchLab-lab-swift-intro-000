@@ -104,11 +104,30 @@ isGreater(num1: a, num2: b)
  isForce(with:"Mary") // false
  ```
 */
+func isForce(with: String) -> Bool {
+    switch with {
+        case "Luke":
+            return true
+        case "Leia":
+            return true
+        case "Anakin":
+            return true
+        case "Obi Wan":
+            return true
+        case "Yoda":
+            return true
+        case "Vader":
+            return true
+        default:
+            return false
+    }
+}
 
 
 
 
-
+isForce(with: "Fete")
+isForce(with: "Obi Wan")
 
 
 
@@ -120,7 +139,22 @@ isGreater(num1: a, num2: b)
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(_ num: Int) -> String {
+    switch num {
+        case 0...3:
+            return "small"
+        case 4...6:
+            return "medium"
+        case 7...10:
+            return "big"
+        default:
+            return "not sure"
+        
+    }
+}
 
+isInRange(88)
+isInRange(3)
 
 
 
