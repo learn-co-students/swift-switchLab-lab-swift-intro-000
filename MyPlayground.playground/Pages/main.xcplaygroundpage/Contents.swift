@@ -19,12 +19,27 @@ let b = 32
 
 
 
+
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
 
+switch (a % b) == 0 {
+    case true:
+        print("true")
+    default:
+        print("false")
+}
 
+//let result = (a % b) == 0
+//
+//switch result {
+//case true:
+//    print("true")
+//default:
+//    print("false")
+//}
 
 
 
