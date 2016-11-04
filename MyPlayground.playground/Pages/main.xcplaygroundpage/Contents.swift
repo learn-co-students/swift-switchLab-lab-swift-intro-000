@@ -22,7 +22,10 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch a % b {
+case 0: print("true")
+default: print("false")
+}
 
 
 
@@ -54,9 +57,14 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a: Int, b: Int) -> String {
+    switch a > b {
+    case true: return "yep"
+    default: return "nope"
+    }
+}
 
-
-
+isGreater(a: b, b: a)
 
 
 
@@ -71,8 +79,19 @@ let b = 32
  ```
 */
 
+func isForce(with: String) -> Bool {
+    switch with {
+        case "Luke": return true
+        case "Leia": return true
+        case "Anakin": return true
+        case "Obi Wan": return true
+        case "Yoda": return true
+        case "Vader": return true
+    default: return false
+    }
+}
 
-
+isForce(with: "Luke")
 
 
 
@@ -86,7 +105,16 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(i: Int) {
+    switch i {
+        case 0...3: print("small")
+        case 4...6: print("medium")
+        case 7...10: print("big")
+        default: print("not sure")
+    }
+}
 
+isInRange(i: 10)
 
 
 
