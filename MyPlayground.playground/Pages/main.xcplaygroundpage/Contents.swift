@@ -23,7 +23,9 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-
+if (a%b) == 0 {
+    print(true)
+}
 
 
 
@@ -35,7 +37,12 @@ let b = 32
 */
 
 
-
+switch (y/Int(x)) {
+case 3:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -45,7 +52,9 @@ let b = 32
 */
 
 
-
+if Double(y) > x && (a/b) > 9 {
+    print(true)
+}
 
 
 
@@ -57,9 +66,14 @@ let b = 32
 
 
 
-
-
-
+func isGreater(a: Int, b: Int) {
+    switch a>b {
+    case true:
+        print(true)
+    default:
+        print(false)
+    }
+}
 
 
 
@@ -72,7 +86,22 @@ let b = 32
 */
 
 
-
+func isForce(with: String)->Bool {
+    switch with {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda & Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -89,7 +118,17 @@ let b = 32
 
 
 
-
+func isInRange(a: Int) {
+    if a >= 0 && a <= 3 {
+        print("small")
+    } else if a <= 6 {
+        print("medium")
+    } else if a <= 10 {
+        print("big")
+    } else {
+        print("not sure")
+    }
+}
 
 
 
