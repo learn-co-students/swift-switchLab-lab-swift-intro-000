@@ -22,6 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
+switch 321 - 32 == 0 {
+case true:
+    print ("true")
+default:
+    print ("false")
+}
 
 
 
@@ -34,7 +40,12 @@ let b = 32
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-
+switch 12 / 5.0 > 3 {
+case true:
+    print ("true")
+default:
+    print ("false")
+}
 
 
 
@@ -45,8 +56,12 @@ let b = 32
 */
 
 
-
-
+switch 12 > 5 || 321 / 32 > 9 {
+case true:
+    print ("true")
+default:
+    print ("false")
+}
 
 
 
@@ -54,12 +69,19 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a: Int, b: Int) -> String {
+    return "String"
+switch a > b {
+case true:
+    print("yep")
+default:
+    print("nope")
 
+isGreater(a: 321, b: 32)
+    
+    
 
-
-
-
-
+    
 
 
 
@@ -70,12 +92,29 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
-
-
-
-
-
-
+    func isForce(name: String) -> Bool {
+        switch name == "Luke" {
+        
+            case "Leia":
+                print ("true")
+            
+            case "Anakin":
+                print ("true")
+            
+            
+                case " Obi Wan":
+            print ("true")
+            
+                    case " Yoda":
+                  print ("true")
+            
+                        case " Vader":
+                            print ("true")
+                            
+        default:
+            print ("false")
+        }
+}
 
 
 /*: Question 6
@@ -88,10 +127,24 @@ let b = 32
 */
 
 
+    func isInRange (number: Int) {
+        switch x {
+        case 0, 1, 2, 3:
+            print (" small")
+            
+        case 4, 5, 6:
+                 print ("medium")
+        case 7, 8, 9, 10 :
+            print ("big")
+        default:
+            print (" not sure")
+        
+        }
+        
+}
 
 
-
-
+isInRange(number: 7)
 
 
 //:
