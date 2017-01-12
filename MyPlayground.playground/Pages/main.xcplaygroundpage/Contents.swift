@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch (a % b) {
+case 0:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -35,7 +40,12 @@ let b = 32
 */
 
 
-
+switch y / Int(x) {
+case 3..<Int.max:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -45,7 +55,12 @@ let b = 32
 */
 
 
-
+switch (y > Int(x) && (a / b) > 9) {
+case true:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -58,6 +73,16 @@ let b = 32
 
 
 
+func isGreater(_ x1: Int, _ x2: Int) -> String {
+    switch x1 > x2 {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
+isGreater(4, 5)
+isGreater(5, 4)
 
 
 
@@ -70,7 +95,26 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
-
+func isForceWith(_ name: String) -> Bool {
+    switch name {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
+isForceWith("Luke")
+isForceWith("Mary")
 
 
 
@@ -88,8 +132,21 @@ let b = 32
 */
 
 
-
-
+func isInRange(_ x1: Int) {
+    switch x1 {
+    case 0..<4:
+        print("small")
+    case 4..<7:
+        print("medium")
+    case 7..<11:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
+isInRange(0)
+isInRange(99)
+isInRange(5)
 
 
 
