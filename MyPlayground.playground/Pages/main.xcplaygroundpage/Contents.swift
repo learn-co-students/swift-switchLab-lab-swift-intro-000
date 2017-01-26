@@ -22,7 +22,14 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch a % b {
+    
+case 0:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -33,7 +40,15 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+switch y/Int(x) > 3 {
+    
+case true:
+    print("true")
+    
+default:
+    print("false")
+    
+}
 
 
 
@@ -43,7 +58,15 @@ let b = 32
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
-
+switch y > Int(x) && (a / b) > 9 {
+    
+case true:
+    print("true")
+    
+default:
+    print("false")
+    
+}
 
 
 
@@ -54,7 +77,18 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
-
+func isGreater(a:Int, b:Int) -> String {
+    
+    switch a > b {
+        
+    case true:
+        return "yep"
+        
+    default:
+        return "nope"
+    }
+    
+}
 
 
 
@@ -70,7 +104,18 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
-
+func isForce(with name:String) -> Bool {
+    
+    switch name {
+        
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+        
+    default:
+        return false
+    }
+    
+}
 
 
 
@@ -86,7 +131,23 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
-
+func isInRange(a:Int) {
+    
+    switch a {
+        
+    case 0...3:
+        print("small")
+        
+    case 4...6:
+        print("medium")
+        
+    case 7...10:
+        print("big")
+        
+    default:
+        print("not sure")
+    }
+}
 
 
 
