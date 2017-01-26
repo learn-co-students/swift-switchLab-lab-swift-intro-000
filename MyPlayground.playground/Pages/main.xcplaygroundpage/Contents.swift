@@ -22,7 +22,14 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch (a%b == 0) {
+    case true:
+        print("true")
+        break
+    
+    default:
+        break
+}
 
 
 
@@ -86,7 +93,29 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange (name: Int) {
+    
+    switch (name) {
+    
+    case 0...3:
+        print("ye")
+        break
+        
+    case 4...6:
+        print("ye")
+        break
+        
+    case 7...10:
+        print("ye")
+        break
+        
+    default:
+        print("ye")
+        break
+        
+    }
 
+}
 
 
 
