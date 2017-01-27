@@ -27,6 +27,13 @@ let b = 32
 
 
 
+switch a % b == 0 {
+case true:
+    print("true")
+default:
+    print("false")
+}
+
 
 
 
@@ -37,6 +44,12 @@ let b = 32
 
 
 
+switch (y / Int(x)) > 3 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -46,6 +59,12 @@ let b = 32
 
 
 
+switch y > Int(x) && (a / b) > 9 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -55,6 +74,14 @@ let b = 32
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
+func isGreater(a: Int, b: Int) -> String {
+    switch a > b  {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
 
@@ -70,11 +97,18 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke","Leia","Anakin","Obi Wan","Yoda","Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
-
-
+isForce(name: "mike")
 
 
 
@@ -88,8 +122,18 @@ let b = 32
 */
 
 
-
-
+func isInRange (a: Int) -> String {
+    switch a {
+    case 0...3:
+        return "small"
+    case 4...6:
+        return "medium"
+    case 7...10:
+        return "big"
+    default:
+        return "not sure"
+    }
+}
 
 
 
