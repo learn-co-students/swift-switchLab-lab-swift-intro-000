@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch true {
+case a % b == 0:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -33,8 +38,12 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
-
+switch true {
+case (y / Int(x)) > 3:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -44,7 +53,12 @@ let b = 32
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
-
+switch true {
+case y > Int(x) && a / b > 9:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -54,9 +68,16 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a: Int, b: Int) -> String {
+    switch true {
+    case a > b:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
-
-
+isGreater(a: 6, b: 9)
 
 
 
@@ -70,9 +91,27 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(inp: String) -> Bool {
+    switch true {
+    case inp == "Luke":
+        return true
+    case inp == "Leia":
+        return true
+    case inp == "Anakin":
+        return true
+    case inp == "Obi Wan":
+        return true
+    case inp == "Yoda":
+        return true
+    case inp == "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
-
-
+isForce(inp: "Leia")
+isForce(inp: "Andi")
 
 
 
@@ -86,6 +125,23 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(a: Int) -> String {
+    switch a {
+    case 0...3:
+        return "small"
+    case 4...6:
+        return "medium"
+    case 7...10:
+        return "big"
+    default:
+        return "not sure"
+    }
+}
+
+isInRange(a: 0)
+isInRange(a: 5)
+isInRange(a: 10)
+isInRange(a: -1)
 
 
 
