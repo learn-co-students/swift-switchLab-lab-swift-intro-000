@@ -22,45 +22,96 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
+switch a % b {
+case 0:
+    print("true")
+default:
+    print("false")
+}
 
 
+//:### Question 1 Answer
 
 
-
+switch a % b {
+    
+case 0:
+    
+    print(true)
+    
+default:
+    
+    print(false)
+    
+}
 
 
 
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
+switch (y / Int(x)) > 3 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
-
-
-
+//: ### Question 2 Answer
+switch y / Int(x) {
+case 3..<Int.max:
+    print(true)
+default:
+    print(false)
+}
 
 
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
+switch y > Int(x) && a / b > 9{
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
-
-
-
+//: ### Question 3 Answer
+switch y > Int(x) && a / b > 9 {
+case true:
+    print(true)
+default:
+    print(false)
+}
 
 
 
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a: Int, b: Int) -> String {
+    switch a > b{
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
+
+isGreater(a: 1, b: 2)
 
 
-
-
-
-
-
+//: ### Question 4 Answer
+func isGreater2(a: Int, b: Int) -> String {
+    switch a > b {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
 /*: Question 5
@@ -70,12 +121,28 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(with name: String) -> Bool {
+    switch name{
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+    default:
+        return false
+    }
+}
+isForce(with:"Luke") // true
+isForce(with:"Mary") // false
 
 
 
-
-
-
+//: ### Question 5 Answer
+func isForceWith(name: String) -> Bool {
+    switch name {
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 /*: Question 6
@@ -86,12 +153,37 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(range: Int){
+    switch range {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    
+    }
+}
+
+isInRange(range: 0) // prints "small"
+isInRange(range: 99) // prints "not sure"
+isInRange(range: 5) // prints "big"
 
 
-
-
-
-
-
+//: ### Question 6 Answer
+func isInRange(arg: Int) {
+    switch arg {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
