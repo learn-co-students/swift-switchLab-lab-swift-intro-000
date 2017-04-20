@@ -22,6 +22,9 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
+if a % b == 0 {
+    print(true)
+}
 
 
 
@@ -33,7 +36,12 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+if y/x > 3 {
+    print("true")
+}
+else{
+    print("false")
+}
 
 
 
@@ -44,7 +52,9 @@ let b = 32
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
-
+if ((Double(y) > Double(x)) && (a/b > 9)) {
+    print("true")
+}
 
 
 
@@ -57,7 +67,13 @@ let b = 32
 
 
 
-
+func isGreater(j: Int, k: Int) ->String{
+    if j > k {
+        print("yep")
+    } else {
+        print("Nope")
+    }
+}
 
 
 
@@ -70,13 +86,18 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(name: String) ->Bool{
+    if name == ("luke" || "Leia" || "Anakin" || "Obi Wan" || "Yoda" || "Vader") {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 
-
-
-
-
+print(isForce(name: "Joe"))
+print(isForce(name: "Luke"))
 
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
@@ -88,6 +109,18 @@ let b = 32
 */
 
 
+func isInRange(n: Int) {
+    if ((a>=0) && (a<=3)) {
+        print("smal")
+    } else if {
+        ((a>=4) && (a<=6)
+    } else if {
+        ((a>=7) && (a<=10)
+    } else {
+        print("not sure")
+    }
+
+}
 
 
 
