@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch a % b {
+    case 0:
+    print(true)
+    default:
+    print(false)
+}
 
 
 
@@ -56,7 +61,14 @@ let b = 32
 */
 
 
-
+func isGreater(a: Int, b: Int) -> String {
+    switch a > b {
+    case true:
+        return "Yep"
+    default:
+        return "Nope"
+    }
+}
 
 
 
@@ -77,7 +89,6 @@ let b = 32
 
 
 
-
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
  ```swift
@@ -86,7 +97,18 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
-
+func isInRange(a: Int) {
+    switch a {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
 
 
