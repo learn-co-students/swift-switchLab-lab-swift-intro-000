@@ -41,7 +41,7 @@ let b = 32
 
 
 /*: Question 3
-### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
+### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. Convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator if there's a need (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
 
@@ -83,7 +83,7 @@ let b = 32
  ```swift
  isInRange(0) // prints "small"
  isInRange(99) // prints "not sure"
- isInRange(5) // prints "big"
+ isInRange(5) // prints "medium"
  ```
 */
 
