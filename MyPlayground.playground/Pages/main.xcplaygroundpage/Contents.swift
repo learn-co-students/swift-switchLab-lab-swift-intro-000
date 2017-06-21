@@ -23,7 +23,12 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-
+switch a % b == 0 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -36,14 +41,24 @@ let b = 32
 
 
 
-
+switch Double(y) / x > 3 {
+case true:
+    print("True")
+default:
+    print("False")
+}
 
 
 
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
-
+switch y > Int(x) && a/b>9{
+case true:
+    print("true")
+default:
+    print("False")
+}
 
 
 
@@ -56,9 +71,16 @@ let b = 32
 */
 
 
+func isGreater(a: Int, b: Int) -> String{
+    switch a > b{
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
-
-
+print(isGreater(a: 9, b: 8))
 
 
 
@@ -70,9 +92,16 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(with: String) -> Bool{
+    switch with {
+    case "luke", "leia", "anakin":
+        return true
+    default:
+        return false
+    }
+}
 
-
-
+isForce(with: "fucker")
 
 
 
@@ -88,10 +117,24 @@ let b = 32
 */
 
 
+func isInRange(a: Int){
+    switch a {
+        case 0...3:
+        print("small")
+        
+        case 4...6:
+        print("medium")
+        
+        case 7...10:
+        print("big")
+        
+        default:
+        print("Not Sure")
+    }
+}
 
 
-
-
+isInRange(a: 5)
 
 
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
