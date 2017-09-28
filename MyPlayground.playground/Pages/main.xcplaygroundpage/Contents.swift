@@ -11,7 +11,7 @@
 //: First let's try some of last lab's questions but using a 'switch' instead of 'if' or 'if/else'. Can you figure out the types of `x`, `y`, `a`, and `b` without option clicking the constants?
 
 // Given....
-let x = 5.0
+let x = 5.0 //Double
 let y = 12
 let a = 321
 let b = 32
@@ -22,9 +22,14 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
+var ans = (a % b) == 0
 
-
-
+switch ans {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -35,7 +40,16 @@ let b = 32
 */
 
 
+let newY = Double(y)
+ans = (newY/x) > 3
 
+
+switch ans {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -44,7 +58,18 @@ let b = 32
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
+let newA = Double(a)
+let newB = Double(b)
 
+
+ans = (newY > x) && ( (newA / newB) > 9)
+
+switch ans {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -54,7 +79,16 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
-
+func isGreater(a: Int, b: Int) -> String {
+    let comparison = a > b
+    
+    switch comparison {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
 
@@ -70,7 +104,26 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
-
+func isForce(with: String) -> Bool {
+    let testCase = with
+    
+    switch testCase {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -86,7 +139,18 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
-
+func isInRange(number: Int) -> String {
+    switch number {
+    case 0...3:
+        return "small"
+    case 4...6:
+        return "medium"
+    case 7...10:
+        return "big"
+    default:
+        return "not sure"
+    }
+}
 
 
 
