@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch a % b == 0 {
+    case true:
+        print ("true")
+default:
+    print("false")
+}
 
 
 
@@ -33,7 +38,12 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+switch Double(y)/x > 3 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -43,7 +53,12 @@ let b = 32
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
-
+switch (Double(y) > x) && (a / b > 9) {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -55,9 +70,16 @@ let b = 32
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
+func isGreater(_ a1: Int, _ a2: Int) -> String {
+    switch a1 > a2 {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
-
-
+print(isGreater(3,5))
 
 
 
@@ -71,7 +93,27 @@ let b = 32
  ```
 */
 
+func isForce(_ with: String) -> Bool {
+    switch with {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
+print(isForce("Luke")) // true
+print(isForce("Mary")) // false
 
 
 
@@ -87,11 +129,31 @@ let b = 32
  ```
 */
 
-
-
-
-
-
-
-
+//func isInRange (_ b1: Int) {
+//    switch b1 {
+//    case 0...3:
+//        print("small")
+//    case 4...6:
+//        print("medium")
+//    case 7...10:
+//        print("big")
+//    default:
+//        print("not sure")
+//    }
+//}
+func isInRange(_ arg: Int) {
+    switch arg {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
+print(isInRange(0))
+print(isInRange(99))
+print(isInRange(5))
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
