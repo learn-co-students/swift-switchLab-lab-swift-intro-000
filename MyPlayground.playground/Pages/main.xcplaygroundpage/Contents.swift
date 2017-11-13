@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch 0 {
+case a%b:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -33,7 +38,12 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+switch 3 {
+case y/Int(x):
+    print("True")
+default:
+    print("False")
+}
 
 
 
