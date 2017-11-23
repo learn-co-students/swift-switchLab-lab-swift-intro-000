@@ -59,12 +59,20 @@ func isGreater(a:Int,b:Int)->String{
  ```
 */
 func isForce(name:String)->Bool{
-    if(name == "Luke" || name == "Leia" || name == "Anakin" || name == "Obi Wan" || name == "Yoda" || name == "Vader"){
-            return true
-        }else{
-            return false
+    switch name {
+    case "Luke","Leia","Anakin","Obi Wan","Yoda","Vader":
+        return true
+    default:
+        return false
     }
+//    if(name == "Luke" || name == "Leia" || name == "Anakin" || name == "Obi Wan" || name == "Yoda" || name == "Vader"){
+//            return true
+//        }else{
+//            return false
+//    }
 }
+//isForce(name: "whatever")
+print("Because you selected 'Obi Wan': \(isForce(name: "Obi Wan"))")
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
  ```swift
