@@ -20,22 +20,22 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-switch a % b {
-case 0:
-    print(true)
-default:
-    print(false)
+switch a % b == 0 {
+    case true:
+        print("true")
+    case false:
+        print("false")
 }
 
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-switch y / Int(x) {
-case 3..<Int.max:
-    print(true)
-default:
-    print(false)
+switch y % Int(x) > 3 {
+    case true:
+        print("true")
+    case false:
+        print("false")
 }
 
 /*: Question 3
@@ -43,10 +43,10 @@ default:
 */
 
 switch y > Int(x) && a / b > 9 {
-case true:
-    print(true)
-default:
-    print(false)
+    case true:
+        print("true")
+    case false:
+        print("false")
 }
 
 /*: Question 4
@@ -55,25 +55,34 @@ default:
 
 func isGreater(a: Int, b: Int) -> String {
     switch a > b {
-    case true:
-        return "yep"
-    default:
-        return "nope"
+        case true:
+            return "yep"
+        case false:
+            return "nope"
     }
 }
 
 /*: Question 5
-### **(5)** Write a function named "isForceWith" that takes a `String` argument which represents a persons name and returns a `Bool`. If the persons name is equal to the name of someone with the force, return `true`, else return `false`. People with the force are Luke, Leia, Anakin, Obi Wan, Yoda & Vader.
+### **(5)** Write a function named `isForce` that takes a `String` argument which represents a persons name and returns a `Bool`. If the persons name is equal to the name of someone with the force, return `true`, else return `false`. People with the force are Luke, Leia, Anakin, Obi Wan, Yoda & Vader.
  ```swift
- isForceWith("Luke") // true
- 
- isForceWith("Mary") // false
+ isForce(with:"Luke") // true
+ isForce(with:"Mary") // false
  ```
 */
 
-func isForceWith(name: String) -> Bool {
+func isForce(name: String) -> Bool {
     switch name {
-    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
         return true
     default:
         return false
@@ -89,15 +98,17 @@ func isForceWith(name: String) -> Bool {
  ```
 */
 
-func isInRange(arg: Int) {
-    switch arg {
-    case 0...3:
-        print("small")
-    case 4...6:
-        print("medium")
-    case 7...10:
-        print("big")
-    default:
-        print("not sure")
+func isInRange(number: Int) {
+    switch number {
+        case 0,1,2,3:
+            print("small")
+        case 4,5,6:
+            print("medium")
+        case 7,8,9,10:
+            print("big")
+        default:
+            print("not sure")
     }
 }
+
+//: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
