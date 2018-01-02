@@ -57,6 +57,19 @@ default:
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a:Int, b:Int) -> String {
+    if a > b {
+        return "yep"
+    } else {
+        return "nope"
+    }
+}
+
+isGreater(a:a, b:b)
+
+
+
+
 
 
 
@@ -75,11 +88,26 @@ default:
  ```
 */
 
+func isForce(with:String) -> Bool {
+    switch with {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
-
-
-
-
+isForce(with:"Luke")
 
 
 /*: Question 6
@@ -90,11 +118,17 @@ default:
  isInRange(5) // prints "big"
  ```
 */
-
-
-
-
-
+func isInRange(number:Int) -> String {
+    if number >= 0 && number <= 3 {
+        return "small"
+    } else if number >= 4 && number <= 6 {
+        return "medium"
+    } else if number >= 7 && number <= 10 {
+        return "big"
+    } else {
+        return "not sure"
+    }
+}
 
 
 
