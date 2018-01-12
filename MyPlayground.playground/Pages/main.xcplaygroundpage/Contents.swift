@@ -22,7 +22,9 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+if a % b == 0 {
+    print(true)
+}
 
 
 
@@ -34,7 +36,11 @@ let b = 32
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-
+if Double(y) / x > 3 {
+    print(true)
+} else {
+    print(false)
+}
 
 
 
@@ -70,7 +76,14 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
-
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -87,8 +100,22 @@ let b = 32
  ```
 */
 
+func isInRange(arg: Int) {
+    switch arg {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
-
+isInRange(0) // prints "small"
+isInRange(99) // prints "not sure"
+isInRange(5) // prints "big"
 
 
 
