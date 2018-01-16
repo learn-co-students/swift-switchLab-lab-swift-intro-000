@@ -15,7 +15,7 @@ let x = 5.0
 let y = 12
 let a = 321
 let b = 32
-
+let c = 100
 
 
 
@@ -31,8 +31,16 @@ default:
 
 
 
-
-
+func averageIsAbove75(a: Double, b: Double, c: Double) -> Bool {
+    let average = (a + b + c) / 3.0
+    switch average > 75.0 {
+    case true:
+        return true
+    default:
+        return false
+    }
+}
+averageIsAbove75(a: 60, b: 60, c: 75)
 
 
 /*: Question 2
@@ -105,7 +113,19 @@ isForce(char1: "Mary")
 
 
 
-
+func passwordCombo(username: String, password: Int) -> String {
+    if password % 3 == 0{
+        switch username {
+        case "Jerry", "Elaine", "Michael":
+            return "Welcome"
+        default:
+            return "access denied"
+        }
+    }else {
+        return "access denied"
+    }
+}
+passwordCombo(username: "Jerry", password: 4)
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
  ```swift
@@ -131,7 +151,23 @@ isInRange(num: 88)
 isInRange(num: 3)
 
 
-
-
+func describe(emoji: String) -> String {
+    switch emoji {
+    case "Kiss":
+        return "💋"
+    case "Cat":
+        return "🐈"
+    case "Turtle":
+        return "🐢"
+    case "Pizza":
+        return "🍕"
+    case "Ghost":
+        return "👻"
+    default:
+        return "Unkown"
+    }
+}
+describe(emoji: "Kiss")
+describe(emoji: "Cat")
 
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
