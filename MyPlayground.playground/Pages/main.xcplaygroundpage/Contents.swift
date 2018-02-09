@@ -23,7 +23,12 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-
+switch a%b==0 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -34,7 +39,12 @@ let b = 32
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-
+switch Double(y)/x>3.0 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -45,7 +55,12 @@ let b = 32
 */
 
 
-
+switch Double(y)>x && a/b>9 {
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -55,10 +70,17 @@ let b = 32
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
 
+func isGreater(a: Int, b: Int) -> String {
+    switch a>b {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
-
-
+isGreater(a: 8, b: 3)
 
 
 
@@ -71,9 +93,17 @@ let b = 32
  ```
 */
 
+func isForce(with: String) -> Bool {
+    switch with=="Luke" || with=="Leia" || with=="Anakin" || with=="Obi Wan" || with=="Yoda" || with=="Vader" {
+    case true:
+        return true
+    default:
+        return false
+    }
+}
 
-
-
+isForce(with: "Luke")
+isForce(with: "Bogdan")
 
 
 
@@ -87,9 +117,22 @@ let b = 32
  ```
 */
 
+func isInRange(a: Int) {
+    switch a {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
-
-
+isInRange(a: 0) // prints "small"
+isInRange(a: 99) // prints "not sure"
+isInRange(a: 5) // prints "big"
 
 
 
