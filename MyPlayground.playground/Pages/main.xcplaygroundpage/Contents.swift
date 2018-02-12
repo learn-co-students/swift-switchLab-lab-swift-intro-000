@@ -71,7 +71,24 @@ func isGreater(a: Int, b: Int) -> String {
  ```
 */
 
-
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 /*: Question 6
 ### **(6)** Write a function "isInRange" that takes an Int  argument and prints "small" if it's in the range of 0 and 3, "medium" if it's in the range of 4 and 6, "big" if it's in the range of 7 and 10, and otherwise prints "not sure".
@@ -82,11 +99,17 @@ func isGreater(a: Int, b: Int) -> String {
  ```
 */
 
-
-
-
-
-
-
+func isInRange(a: Int) {
+    switch a {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
