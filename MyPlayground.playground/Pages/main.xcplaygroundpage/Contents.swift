@@ -113,5 +113,23 @@ print (answer4)
  ```
 */
 
+func isInRange(ans: Int)
+{
+    switch ans {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("large")
+    default:
+        print("not sure")
+    }
+}
+
+isInRange(ans: 0)
+isInRange(ans: 99)
+isInRange(ans: 5)
+isInRange(ans: 8)
 
 //: Here is a [link](https://github.com/learn-co-curriculum/swift-switchLab-lab/blob/solution/MyPlayground.playground/Pages/main.xcplaygroundpage/Contents.swift) to the solution.
