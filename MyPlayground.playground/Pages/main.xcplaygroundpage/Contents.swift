@@ -81,17 +81,7 @@ print (answer2)
 func isForce(with: String) -> Bool
 {
     switch with {
-    case "Luke":
-        return true
-    case "Leia":
-        return true
-    case "Anakin":
-        return true
-    case "Obi Wan":
-        return true
-    case "Yoda":
-        return true
-    case "Vader":
+    case "Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader":
         return true
     default:
         return false
