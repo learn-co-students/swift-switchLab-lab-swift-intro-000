@@ -22,7 +22,14 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+let problem = (a % b == 0)
+switch problem {
+case true:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -33,7 +40,14 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+let problem2 = (y/Int(x)) > 3
+switch problem2 {
+    case true:
+        print("true")
+    
+    default:
+        print("false")
+}
 
 
 
@@ -43,7 +57,14 @@ let b = 32
 /*: Question 3
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
-
+let problem3 = y > Int(x) && a/b > 9
+switch problem3 {
+case true:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -54,10 +75,19 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(first: Int, second: Int) -> String {
+    let problem = first > second
+    switch problem {
+    case true:
+        return("yep")
+        
+    default:
+        return("nope")
+    }
+}
 
-
-
-
+isGreater(first: 10, second: 3  )
+isGreater(first: 3, second: 10)
 
 
 
@@ -70,10 +100,27 @@ let b = 32
  isForce(with:"Mary") // false
  ```
 */
+func isForce(name: String) -> Bool {
+    switch name {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
-
-
-
+isForce(name: "Luke")
+isForce(name: "Nick")
 
 
 
@@ -86,9 +133,23 @@ let b = 32
  isInRange(5) // prints "big"
  ```
 */
+func isInRange(number: Int) {
+    switch number {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("large")
+    default:
+        print("not sure")
+    }
+}
 
-
-
+isInRange(number: 1)
+isInRange(number: 5)
+isInRange(number: 9)
+isInRange(number: 33)
 
 
 
