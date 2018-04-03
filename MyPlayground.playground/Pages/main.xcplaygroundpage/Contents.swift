@@ -24,7 +24,12 @@ let b = 32
 */
 
 
-
+switch a % b {
+case 0:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -34,7 +39,12 @@ let b = 32
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
 
-
+switch (y / Int(x)) > 3{
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -45,7 +55,12 @@ let b = 32
 */
 
 
-
+switch (y > Int(x)) && ((a / b) > 9){
+case true:
+    print("true")
+default:
+    print("false")
+}
 
 
 
@@ -56,7 +71,14 @@ let b = 32
 */
 
 
-
+func isGreater(intOne: Int, intTwo: Int) -> String {
+    switch a > b{
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
 
@@ -72,7 +94,24 @@ let b = 32
 */
 
 
-
+func isForce(name: String) -> Bool{
+    switch name{
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -87,7 +126,19 @@ let b = 32
  ```
 */
 
-
+func isInRange(num: Int){
+    switch num{
+    case 0...3:
+        print("smal")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+        
+    }
+}
 
 
 
