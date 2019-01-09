@@ -22,7 +22,12 @@ let b = 32
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
-
+switch a % b {
+case 0:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -33,7 +38,12 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+switch (y / Int(x)) < 3 {
+case true:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -44,7 +54,12 @@ let b = 32
 ### **(3)** Print 'true' if y is greater than x and a divided by b is greater than 9. If there's any need to convert to either an `Int` or a `Double` to satisfy the requirements of a binary operator (you can choose whichever one you want to convert to to satisfy the requirements).
 */
 
-
+switch (y > Int(x)) && (a / b) > 9 {
+case true:
+    print(true)
+default:
+    print(false)
+}
 
 
 
@@ -56,7 +71,15 @@ let b = 32
 */
 
 
-
+func isGreater(a:Int, b:Int)-> String {
+    
+    switch a > b {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
 
 
@@ -71,6 +94,24 @@ let b = 32
  ```
 */
 
+func isForce(name: String)-> Bool{
+    switch name {
+    case "Luke":
+        return true
+    case "Leia":
+        return true
+    case "Anakin":
+        return true
+    case "Obi Wan":
+        return true
+    case "Yoda":
+        return true
+    case "Vader":
+        return true
+    default:
+        return false
+    }
+}
 
 
 
@@ -87,6 +128,18 @@ let b = 32
  ```
 */
 
+func isInRange(num: Int) {
+    switch num {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
 
 
